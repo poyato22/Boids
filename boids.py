@@ -8,8 +8,8 @@ MAX_SPEED = 4
 NEIGHBOR_RADIUS = 50
 SEPARATION_DISTANCE = 15
 
-BLACK = (0, 0, 0)
-WHITE = (255, 255, 255)
+BLUE = (80, 180, 255)
+GREY = (70, 70, 70)
 
 class Boid:
     def __init__(self):
@@ -75,7 +75,7 @@ class Boid:
             self.velocity += direction * 0.1
     
     def draw(self, screen):
-        pygame.draw.circle(screen, WHITE, (int(self.position.x), int(self.position.y)), 3)
+        pygame.draw.circle(screen, GREY, (int(self.position.x), int(self.position.y)), 3)
 
 
 def main():
@@ -86,7 +86,7 @@ def main():
     
     running = True
     while running:
-        screen.fill(BLACK)
+        screen.fill(BLUE)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
