@@ -81,6 +81,7 @@ class Boid:
 def main():
     pygame.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
+    pygame.display.set_caption("Boids")
     clock = pygame.time.Clock()
     boids = [Boid() for _ in range(BOID_COUNT)]
     
